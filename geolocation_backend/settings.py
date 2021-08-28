@@ -15,7 +15,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'e9%e59bqx+%3ofq5u6xp*78&07&#!#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://geolocation-application.herokuapp.com',
+    '127.0.0.1',
+]
 
 
 # Application definition
