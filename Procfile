@@ -1,0 +1,1 @@
+web: gunicorn geolocation_backend.wsgi --log-file -
