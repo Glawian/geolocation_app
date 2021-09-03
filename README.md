@@ -15,6 +15,6 @@ docker-compose run geolocation-app python manage.py createsuperuser (if needed)
 docker-compose run geolocation-app python manage.py migrate
 ```
 
-Migration will create auth0 user needed for authentication.
+Migration will create auth0 user needed for authentication. To use other authentication APIs change AUTH0_DOMAIN and API_IDENTIFIER in settings.py of the project.
 
 **Django** project will be available under [localhost:80](http://localhost:80)
