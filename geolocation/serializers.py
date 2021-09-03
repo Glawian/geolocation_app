@@ -15,6 +15,6 @@ class GeolocationPostSerializer(serializers.ModelSerializer):
     
     def create(self, validated_data):
         api = GeolocationApi()
-        model_data = api.get_model_data(validated_data.get('customer'))
+        model_data = api.get_model_data(validated_data.get('ip'))
         return Geolocation.objects.create(**model_data)
         

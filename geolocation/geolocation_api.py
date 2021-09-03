@@ -15,13 +15,12 @@ class GeolocationApi(object):
             'country_name': geolocation_data['country_name'],
             'region_name': geolocation_data['region_name'],
             'city': geolocation_data['city'],
-            'zip_code': geolocation_data['zip_code'],
+            'zip_code': geolocation_data['zip'],
             'latitude': geolocation_data['latitude'],
             'longitude': geolocation_data['longitude'],
         }
 
     def _get_geolocation_data(self, ip: str) -> Dict:
-
         params = {'access_key': self.token, 'fields': 'main'}
         url = self.base_url + ip
 
