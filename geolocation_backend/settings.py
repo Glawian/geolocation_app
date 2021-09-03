@@ -142,7 +142,7 @@ STATIC_URL = '/static/'
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-AUTH0_DOMAIN = os.environ['AUTH0_DOMAIN']
+AUTH0_DOMAIN = 'dev-s6zhsmlu.us.auth0.com'
 API_IDENTIFIER = 'https://geolocation-api-app.herokuapp.com/'
 PUBLIC_KEY = None
 JWT_ISSUER = None
