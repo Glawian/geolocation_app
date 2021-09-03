@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
-    'geolocation.apps.GeolocationConfig'
+    'geolocation.apps.GeolocationConfig',
 ]
 
 REST_FRAMEWORK = {

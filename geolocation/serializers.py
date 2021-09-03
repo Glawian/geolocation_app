@@ -1,7 +1,20 @@
 from rest_framework import serializers
-from geolocation.models import Geolocation
 
-class GeolocationSerializer(serializers.ModelSerializer):
+from geolocation.models import Geolocation
+from geolocation.geolocation_api import GeolocationApi
+
+class GeolocationGetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Geolocation
-        fields = ['id', 'ip', 'continent_name', 'country_name', 'region_name', 'city', 'zip_code', 'latitude', 'longitude']
+        fields = '__all__'
+
+class GeolocationPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Geolocation
+        fields = ['ip']
+    
+    def create(self, validated_data):
+        api = GeolocationApi()
+        model_data = api.get_model_data(validated_data.get('customer'))
+        return Geolocation.objects.create(**model_data)
+        

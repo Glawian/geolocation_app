@@ -1,7 +1,7 @@
 from django.db import models
 
 class Geolocation(models.Model):
-    ip = models.CharField(blank=False, max_length=15)
+    ip = models.GenericIPAddressField(blank=False, protocol='IPv4')
     continent_name = models.CharField(max_length=15)
     country_name = models.CharField(max_length=50)
     region_name = models.CharField(max_length=50)
